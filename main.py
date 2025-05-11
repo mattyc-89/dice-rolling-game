@@ -4,13 +4,12 @@ def main():
     print("Welcome to Coomber's Dice Rolling Game!") 
 
     while True:
-        user_input = input("Do you want to roll the die? (y/n): ")
-        if user_input == "y" or user_input == "Y":
+        user_input = input("Do you want to roll the dice? (y/n): ").lower()
+        if user_input == "y": 
             roll_1 = random.randint(1, 6)
             roll_2 = random.randint(1, 6)
-            roll = roll_1 + roll_2
-            print(f"You rolled a:{roll}!")
-        elif user_input == "n" or user_input == "N":
+            print(f"You rolled a: {roll_1} and {roll_2}")
+        elif user_input == "n":
             print("Thanks for playing!")
             break
         else:
